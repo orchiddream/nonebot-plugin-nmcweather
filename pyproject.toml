@@ -1,0 +1,25 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "nonebot-plugin-weather"
+version = "0.1.0"
+description = "基于NMC API的NoneBot2天气查询插件，支持城市天气查询和省份区县查询"
+authors = ["junzishendu_ln.@163.com"]
+license = "MIT"
+homepage = "你的项目主页（如GitHub链接）"
+repository = "你的项目仓库链接（如GitHub仓库）"
+keywords = ["nonebot2", "nonebot", "plugin", "weather", "onebot.v11"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nonebot2 = "^2.0.0"
+nonebot-adapter-onebot = "^2.0.0"
+requests = "^2.31.0"  # 插件中实际使用的网络请求库
+python-dotenv = "^1.0.0"  # 可选：用于后续配置文件扩展
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"  # 单元测试
+flake8 = "^6.0.0"  # 代码规范检查
+black = "^23.12.1"  # 代码格式化工具

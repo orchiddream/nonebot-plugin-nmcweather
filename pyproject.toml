@@ -8,8 +8,8 @@ version = "0.1.0"
 description = "基于NMC API的NoneBot2天气查询插件，支持城市天气查询和省份区县查询"
 authors = ["junzishendu_ln.@163.com"]
 license = "MIT"
-homepage = "你的项目主页（如GitHub链接）"
-repository = "你的项目仓库链接（如GitHub仓库）"
+homepage = "https://github.com/orchiddream/nonebot-plugin-nmcweather"
+repository = "https://github.com/orchiddream/nonebot-plugin-nmcweather"
 keywords = ["nonebot2", "nonebot", "plugin", "weather", "onebot.v11"]
 
 [tool.poetry.dependencies]

@@ -1,6 +1,6 @@
 import json
-import requests
 import time
+import httpx
 from pathlib import Path
 from typing import Optional, Dict, Any, List
 
@@ -53,16 +53,16 @@ async def search_city_code(keyword: str) -> Optional[str]:
     return None
 
 async def get_weather(stationid: str) -> Optional[Dict[str, Any]]:
-    """调用 NMC 天气 API"""
+    """调用 NMC 天气 API（异步版本）"""
     url = f"https://www.nmc.cn/rest/weather?stationid={stationid}&_={int(time.time() * 1000)}"
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"天气API请求失败: {e}")
-        return None
-
+    async with httpx.AsyncClient() as client:
+        try:
+            response = await client.get(url, timeout=10)
+            response.raise_for_status()
+            return response.json()
+        except httpx.RequestError as e:
+            print(f"天气API请求失败: {e}")
+            return None
 
 async def get_all_districts(province: str) -> Dict[str, List[str]]:
     """

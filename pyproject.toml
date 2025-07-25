@@ -16,4 +16,4 @@ keywords = ["nonebot2", "nonebot", "plugin", "weather", "onebot.v11"]
 python = "^3.10"
 nonebot2 = "^2.4.2"
 nonebot-adapter-onebot = "^2.4.6"
-requests = "^2.32.4"  # 插件中实际使用的网络请求库
+httpx = "^0.28.1" 

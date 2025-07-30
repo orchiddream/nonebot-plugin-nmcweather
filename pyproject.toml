@@ -16,4 +16,4 @@ keywords = ["nonebot2", "nonebot", "plugin", "weather", "onebot.v11"]
 python = "^3.10"
 nonebot2 = "^2.4.2"
 nonebot-adapter-onebot = "^2.4.6"
-httpx = "^0.28.1 || ^1.0.0"  # 支持 0.28.x 和 1.x 版本
+httpx = ">=0.28.1,<0.29.0 || >=1.0.0,<2.0.0"  # 使用逗号分隔多个范围

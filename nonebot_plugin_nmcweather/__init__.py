@@ -7,5 +7,6 @@ __plugin_meta__ = PluginMetadata(
     usage="天气 省份-区县|天气 区县|支持区县 省份",
     type="application",
     homepage="https://github.com/orchiddream/nonebot-plugin-nmcweather",
+    version="0.1.0",
     supported_adapters={"~onebot.v11"},
 )
